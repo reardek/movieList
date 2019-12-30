@@ -1,9 +1,14 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import List from './List'
+import List from './containers/List'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
-    return <List />
+    return (
+        <div className='container-fluid'>
+            <List />
+        </div>
+    )
 };
 
 ReactDom.render(<App />, document.getElementById('root'))
