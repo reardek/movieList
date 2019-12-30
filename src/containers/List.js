@@ -25,11 +25,19 @@ class List extends Component {
         const {data, loading} = this.state;
 
         if (loading) {
-            return <div>Loading...</div>
+            return <div>Loading...</div>;
         }
 
-        return data.map(movie => <Card key={ movie.id} movie={movie} />);
+        return (
+            <div className='row'>
+                {data.map(movie => (
+                    <div className='col-sm-2'>
+                        <Card key={ movie.id } movie={ movie } />
+                    </div>
+                    ))}
+            </div>
+        );
     }
-};
+}
 
 export default List;
